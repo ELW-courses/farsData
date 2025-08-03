@@ -16,7 +16,7 @@ knitr::opts_chunk$set(
 # farsData
 
 <!-- badges: start -->
-
+[![Build Status](https://app.travis-ci.com/ELW-courses/farsData.svg?token=F5njBErAxXPvvm3Axc6P&branch=main)](https://app.travis-ci.com/ELW-courses/farsData)
 <!-- badges: end -->
 
 The goal of farsData is to assist with reading, analyzing, and visualizing data acquired from the US National Highway Traffic Safety Administration's Fatality Analysis Reporting System (FARS) database. This package and repo are part of the John Hopkins Coursera course: Mastering R Package Development, to demonstrate how to create a package, run tests, and include a Travis badge.
