@@ -1,0 +1,46 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+# farsData
+
+<!-- badges: start -->
+<!-- badges: end -->
+
+The goal of farsData is to assist with reading, analyzing, and visualizing data acquired from the US National Highway Traffic Safety Administration's Fatality Analysis Reporting System (FARS) database. This package and repo are part of the John Hopkins Coursera course: Mastering R Package Development, to demonstrate how to create a package, run tests, and include a Travis badge.
+
+## Installation
+
+You can install the development version of farsData with:
+
+``` r
+library(devtools)
+install.packages("ELW-courses/farsData")
+```
+
+## Example
+
+The following example shows how to provide a summary of the FARS data for every month in 2014 and 2015.
+
+```{r example summ, eval = FALSE}
+library(farsData)
+fars_summarize_years(c(2014, 2015))
+```
+
+The follwing example shows how to provide a map with plotted FARS data for the state of Tennessee (STATE = 47) in 2013. 
+
+```{r example map, eval = FALSE}
+library(farsData)
+fars_map_state(47, 2013)
+```

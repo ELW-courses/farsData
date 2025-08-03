@@ -1,0 +1,25 @@
+Package: farsData
+Title: Read, summarize, and map Fatality Analysis Reporting System (FARS) data
+Version: 0.0.0.9000
+Authors@R: person("E LW", email = "placeholder@gmail.com", role = c("aut", "cre"))
+Description: A ste of functions to read, summarize, and visualize data from the US
+    National Highway Traffic Safety Administration's Fatality Analysis Reporting
+    System (FARS). Packge is part of the BUILDING R PACKAGES, Peer-graded Assignment.
+License: MIT + file LICENSE
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.2
+Depends: 
+    R (>= 3.5)
+LazyData: true
+Imports: 
+    dplyr,
+    maps,
+    readr,
+    tidyr
+Suggests: 
+    knitr,
+    rmarkdown,
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3
+VignetteBuilder: knitr
