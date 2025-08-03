@@ -1,0 +1,65 @@
+---
+title: "farsData_useage"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{farsData_useage}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(farsData)
+```
+
+# Pacakage description
+The `farsData` package provides functionality to read, summarize, and vizualize Fatality Analysis Reporting System (FARS) data from the [National Highway Traffic Safety Administration](https://www.nhtsa.gov/research-data/fatality-analysis-reporting-system-fars).
+
+[FARS](https://en.wikipedia.org/wiki/Fatality_Analysis_Reporting_System) is a nationwide census of annual data regarding fatal injuries suffered in motor vehicle traffic crashes.
+
+
+# Included data
+The following data files are included within the package:
+```{r data files}
+cat(list.files(system.file("extdata", package = 'farsData')), sep = "\n")
+``` 
+
+
+# Package functions
+
+## Creating and reading data
+The *make_filename* function creates a file name based on the four-digit numeric year provided to the function and returns the filepath for the data file.
+```{r filenames, eval = FALSE}
+make_filename(2014)
+```
+
+The *fars_read* checks for the specified file name and loads the data if the file exists. This function is used within the *fars_read_years* and *fars_map_state* functions. <br><br>
+The *fars_read_years* function reads in the data from the existing FARS files for the user-specified 4-digit years. A list of tibbles is returned with one element for each year.
+```{r reading data}
+fars_read_years(2015)
+
+
+fars_read_years(c(2013, 2015))
+```
+
+## Summarizing data
+The *fars_summarize_years* function reads in the data from existing FARS files for each of the user-specified 4-digit years. The function returns a tibble containing a monthly summary of the FARS data for each of the requested years.
+```{r summarizing  data}
+fars_summarize_years(2013)
+
+
+fars_summarize_years(c(2014, 2015))
+```
+
+## Mapping data
+The *fars_map_state* function takes the input of a state number ID and 4-digit year to plot the accident locations for the state specified within the chosen year. 
+```{r mapping data, eval = FALSE}
+fars_map_state(15,2015)
+fars_map_state(state.num = 12, year = 2014)
+```
