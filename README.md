@@ -63,4 +63,3 @@ library(farsData)
 fars_map_state(47, 2013)
 ```
 
-<img src="man/figures/README-example map-1.png" width="100%" />
