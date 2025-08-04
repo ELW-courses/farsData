@@ -16,6 +16,7 @@ knitr::opts_chunk$set(
 # farsData
 
 <!-- badges: start -->
+[![R-Build](https://github.com/ELW-courses/farsData/actions/workflows/r.yml/badge.svg)](https://github.com/ELW-courses/farsData/actions/workflows/r.yml)
 [![R-CMD-check](https://github.com/ELW-courses/farsData/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/ELW-courses/farsData/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
