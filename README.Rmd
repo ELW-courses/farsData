@@ -40,7 +40,7 @@ library(farsData)
 fars_summarize_years(c(2014, 2015))
 ```
 
-The follwing example shows how to provide a map with plotted FARS data for the state of Tennessee (STATE = 47) in 2013. 
+The following example shows how to provide a map with plotted FARS data for the state of Tennessee (STATE = 47) in 2013. 
 
 ```{r example map, eval = FALSE}
 library(farsData)
