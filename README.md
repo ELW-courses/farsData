@@ -5,6 +5,7 @@
 
 <!-- badges: start -->
 
+[![R-CMD-check](https://github.com/ELW-courses/farsData/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/ELW-courses/farsData/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
 The goal of farsData is to assist with reading, analyzing, and
@@ -12,7 +13,8 @@ visualizing data acquired from the US National Highway Traffic Safety
 Administration’s Fatality Analysis Reporting System (FARS) database.
 This package and repo are part of the John Hopkins Coursera course:
 Mastering R Package Development, to demonstrate how to create a package,
-run tests, and include a Travis badge.
+run tests, and include a badge. Travis CI is no longer supported so a
+github actions badge for R-CMD-check is used in its place.
 
 ## Installation
 
@@ -31,13 +33,6 @@ for every month in 2014 and 2015.
 ``` r
 library(farsData)
 fars_summarize_years(c(2014, 2015))
-#> Warning: `tbl_df()` was deprecated in dplyr 1.0.0.
-#> ℹ Please use `tibble::as_tibble()` instead.
-#> ℹ The deprecated feature was likely used in the farsData package.
-#>   Please report the issue to the authors.
-#> This warning is displayed once every 8 hours.
-#> Call `lifecycle::last_lifecycle_warnings()` to see where this warning was
-#> generated.
 #> # A tibble: 12 × 3
 #>    MONTH `2014` `2015`
 #>    <dbl>  <int>  <int>
@@ -55,11 +50,10 @@ fars_summarize_years(c(2014, 2015))
 #> 12    12   2604   2781
 ```
 
-The follwing example shows how to provide a map with plotted FARS data
+The following example shows how to provide a map with plotted FARS data
 for the state of Tennessee (STATE = 47) in 2013.
 
 ``` r
 library(farsData)
 fars_map_state(47, 2013)
 ```
-

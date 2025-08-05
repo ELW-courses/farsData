@@ -16,7 +16,7 @@ knitr::opts_chunk$set(
 # farsData
 
 <!-- badges: start -->
-[![R-CMD-check.yaml](https://github.com/ELW-courses/farsData/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/ELW-courses/farsData/actions/workflows/R-CMD-check.yaml)
+[![R-CMD-check](https://github.com/ELW-courses/farsData/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/ELW-courses/farsData/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
 The goal of farsData is to assist with reading, analyzing, and visualizing data acquired from the US National Highway Traffic Safety Administration's Fatality Analysis Reporting System (FARS) database. This package and repo are part of the John Hopkins Coursera course: Mastering R Package Development, to demonstrate how to create a package, run tests, and include a badge. Travis CI is no longer supported so a github actions badge for R-CMD-check is used in its place.
@@ -34,7 +34,7 @@ install.packages("ELW-courses/farsData")
 
 The following example shows how to provide a summary of the FARS data for every month in 2014 and 2015.
 
-```{r example summ, eval = FALSE}
+```{r example summ}
 library(farsData)
 fars_summarize_years(c(2014, 2015))
 ```
